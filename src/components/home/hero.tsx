@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, FlaskConical } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/container";
 import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -50,11 +51,16 @@ export function Hero() {
 
         <div className="relative mx-auto w-full max-w-sm">
           <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-primary/15 via-accent/10 to-transparent blur-2xl" />
-          <div className="flex aspect-square w-full items-center justify-center rounded-3xl border border-border bg-card shadow-xl shadow-black/5">
-            <div className="flex flex-col items-center gap-3 text-muted-foreground">
-              <FlaskConical className="size-16" strokeWidth={1.25} />
-              <p className="font-mono text-xs uppercase tracking-wide">Photo coming soon</p>
-            </div>
+          <div className="relative aspect-square w-full overflow-hidden rounded-3xl border border-border bg-card shadow-xl shadow-black/5">
+            <Image
+              src="/portrait.jpg"
+              alt={`Portrait of ${siteConfig.name}`}
+              fill
+              priority
+              sizes="(min-width: 1024px) 384px, 320px"
+              className="object-cover"
+              style={{ objectPosition: "50% 22%" }}
+            />
           </div>
         </div>
       </Container>
