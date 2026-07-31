@@ -59,7 +59,7 @@ export function Hero() {
               priority
               sizes="(min-width: 1024px) 384px, 320px"
               className="object-cover"
-              style={{ objectPosition: "50% 22%" }}
+              style={{ objectPosition: "50% 30%" }}
             />
           </div>
         </div>
