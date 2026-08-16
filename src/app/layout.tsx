@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { siteConfig } from "@/lib/site-config";
+import { AnnouncementBanner } from "@/components/announcement-banner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -63,6 +64,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <AnnouncementBanner />
           <SiteHeader />
           <main className="flex-1">{children}</main>
           <SiteFooter />
